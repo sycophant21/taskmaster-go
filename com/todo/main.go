@@ -7,8 +7,8 @@ import (
 	"go_test/com/todo/utiils/io"
 	"log"
 	"os"
-	"os/exec"
-	"runtime"
+	/*	"os/exec"
+		"runtime"*/
 	"time"
 )
 
@@ -62,7 +62,7 @@ func executeIntent(intent uint8) error {
 		if err != nil {
 			return err
 		}
-		clearTerminal()
+		//clearTerminal()
 	case 2:
 		domain.EditTask()
 	case 3:
@@ -109,7 +109,7 @@ func createNewTask() error {
 	return nil
 }
 
-func clearTerminal() {
+/*func clearTerminal() {
 	var cmd *exec.Cmd
 
 	switch runtime.GOOS {
@@ -125,4 +125,4 @@ func clearTerminal() {
 	// Attach the command's output to the terminal
 	cmd.Stdout = os.Stdout
 	_ = cmd.Run()
-}
+}*/
